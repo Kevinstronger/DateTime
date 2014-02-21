@@ -7,7 +7,13 @@ test = "2012-08-01 00:00:03"
 if not re.search(r'^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}$', test):
     print "not match"
     exit()
-
+    
+if not re.search('\d{4}\-\d{2}\-\d{2} \d{2}:\d{2}:\d{2}$', test):
+    print "not match"
+    exit()
+else:
+    print "Matched Again!"
+    
 dt1 = datetime.strptime(test, "%Y-%m-%d %H:%M:%S")
 
 test = "2012-02-29 00:00:03"
